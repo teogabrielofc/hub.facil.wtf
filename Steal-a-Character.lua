@@ -129,7 +129,7 @@ local ButtonSteal = tabautosteal:CreateButton({
    Name = "Complete Steal/Completar Roubo(Bugged/Bugado)",
    Callback = function()
    local positionsign = lockedStudio.CompletePurchaseSign.Position
-   character.HumanoidRootPart.CFrame = CFrame.new(positionsign + Vector3.new(0, 5, 0))
+   character.HumanoidRootPart.CFrame = CFrame.new(positionsign + Vector3.new(0, 10, 0))
    firetouchinterest(character.HumanoidRootPart, lockedStudio.CompletePurchaseZone, 0)
    firetouchinterest(character.HumanoidRootPart, lockedStudio.CompletePurchaseZone, 1)
    end,
