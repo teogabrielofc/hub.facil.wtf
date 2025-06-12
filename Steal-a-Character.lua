@@ -113,7 +113,7 @@ local autolocktoggle = tabbase:CreateToggle({
    while autolockvalue do
    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, lockedStudio.LockOneMin.Hitbox, 0)
    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, lockedStudio.LockOneMin.Hitbox, 1)
-   wait(0.5)
+   wait(0.2)
    end
    end,
 })
@@ -144,6 +144,39 @@ local ToggleInstant = tabautosteal:CreateToggle({ -- Créditos ao Sw1ft,
    while instantConn do
    game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(prompt) prompt.HoldDuration = 0 end)
    wait(1)
+   end
+   end,
+})
+
+local getmoneyvalue
+local togglemoney = tabbase:CreateToggle({
+   Name = "Auto Get Money",
+   CurrentValue = false,
+   Flag = "ToggleMoney",
+   Callback = function(Value)
+   getmoneyvalue = Value
+   while getmoneyvalue do
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms.Platform.Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms.Platform.Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[2].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[2].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[3].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[3].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[4].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[4].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[5].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[5].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[6].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[6].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[7].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[7].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[8].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[8].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[9].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[9].Collect, 1)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[10].Collect, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Platforms:GetChildren()[10].Collect, 1)
+   wait(0.5)
    end
    end,
 })
