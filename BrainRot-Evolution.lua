@@ -122,3 +122,422 @@ end
    
    end,
 })
+
+local chickvalue
+local ChickToggle = tabautofarm:CreateToggle({
+   Name = "Chick",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   chickvalue = Value
+while chickvalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local chickHRP = workspace:WaitForChild("Chick"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = chickHRP.CFrame
+		end
+
+		local args = {
+			chickHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+
+local bullvalue
+local bullToggle = tabautofarm:CreateToggle({
+   Name = "Bull",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   bullvalue = Value
+while bullvalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local bullHRP = workspace:WaitForChild("Bull"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = bullHRP.CFrame
+		end
+
+		local args = {
+			bullHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local orangevalue
+local orangeToggle = tabautofarm:CreateToggle({
+   Name = "Orange",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   orangevalue = Value
+while orangevalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local orangeHRP = workspace:WaitForChild("Orange"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = orangeHRP.CFrame
+		end
+
+		local args = {
+			orangeHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local acornvalue
+local acornToggle = tabautofarm:CreateToggle({
+   Name = "Acorn",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   acornvalue = Value
+while acornvalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local acornHRP = workspace:WaitForChild("Acorn"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = acornHRP.CFrame
+		end
+
+		local args = {
+			acornHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local briivalue
+local briiToggle = tabautofarm:CreateToggle({
+   Name = "Brrr Brr Patapim",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   briivalue = Value
+while briivalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local briiHRP = workspace:WaitForChild("Brrr Brr Patapim"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = briiHRP.CFrame
+		end
+
+		local args = {
+			briiHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local trashvalue
+local trashToggle = tabautofarm:CreateToggle({
+   Name = "Trash Bag",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   trashvalue = Value
+while trashvalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local trashHRP = workspace:WaitForChild("Trash Bag"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = trashHRP.CFrame
+		end
+
+		local args = {
+			trashHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local RedPandavalue
+local RedPandaToggle = tabautofarm:CreateToggle({
+   Name = "Red Panda",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   RedPandavalue = Value
+while RedPandavalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local RedPandaHRP = workspace:WaitForChild("Red Panda"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = RedPandaHRP.CFrame
+		end
+
+		local args = {
+			RedPandaHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local Tirevalue
+local TireToggle = tabautofarm:CreateToggle({
+   Name = "Tire",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   Tirevalue = Value
+while Tirevalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local TireHRP = workspace:WaitForChild("Tire"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = TireHRP.CFrame
+		end
+
+		local args = {
+			TireHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local Rhinovalue
+local RhinoToggle = tabautofarm:CreateToggle({
+   Name = "Rhino",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   Rhinovalue = Value
+while Rhinovalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local RhinoHRP = workspace:WaitForChild("Rhino"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = RhinoHRP.CFrame
+		end
+
+		local args = {
+			RhinoHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local Boxvalue
+local BoxToggle = tabautofarm:CreateToggle({
+   Name = "Box",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   Boxvalue = Value
+while Boxvalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local BoxHRP = workspace:WaitForChild("Box"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = BoxHRP.CFrame
+		end
+
+		local args = {
+			BoxHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
+
+local CactoHipopootamovalue
+local CactoHipopootamoToggle = tabautofarm:CreateToggle({
+   Name = "CactoHipopootamo",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   CactoHipopootamovalue = Value
+while CactoHipopootamovalue do
+	local args = {
+		game:GetService("Players").LocalPlayer
+	}
+
+	local canAttack = game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("CanAttack"):InvokeServer(unpack(args))
+
+	if canAttack then
+		local CactoHipopootamoHRP = workspace:WaitForChild("Cacto Hipopootamo"):WaitForChild("HumanoidRootPart")
+
+		
+		local character = game:GetService("Players").LocalPlayer.Character
+		if character and character:FindFirstChild("HumanoidRootPart") then
+			character.HumanoidRootPart.CFrame = CactoHipopootamoHRP.CFrame
+		end
+
+		local args = {
+			CactoHipopootamoHRP.CFrame
+		}
+		game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services"):WaitForChild("MonsterService"):WaitForChild("RF"):WaitForChild("RequestAttack"):InvokeServer(unpack(args))
+
+		wait(0.3)
+	else
+		wait(0.5)
+	end
+end
+
+   
+   end,
+})
