@@ -6,7 +6,7 @@ if exec_name ~= "Cloudy" then
 else
     game.StarterGui:SetCore("SendNotification", {
         Title = "Aviso",
-        Text = "Este script pode estar bugaddo no seu executor.",
+        Text = "Este script pode estar bugaddo no seu executor. Use outro.",
         Duration = 5
     })
 	
