@@ -1,10 +1,9 @@
 local exec_name, exec_version = identifyexecutor()
 
-if exec_name = "Cloudy" then
+if exec_name == "Cloudy" then
     warn("Cloudy is not supported, sorry")
 	return
-end
-elseif exec_name = "Xeno" then
+elseif exec_name == "Xeno" then
     warn("Xeno is not supported, sorry")
 	return
 end
