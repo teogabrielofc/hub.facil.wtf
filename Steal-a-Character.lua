@@ -1,3 +1,15 @@
+local exec_name, exec_version = identifyexecutor()
+
+if exec_name = "Cloudy" then
+    warn("Cloudy is not supported, sorry")
+	return
+end
+elseif exec_name = "Xeno" then
+    warn("Xeno is not supported, sorry")
+	return
+end
+
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/refs/heads/main/Source.lua"))()
 -- Créditos ao Pixeluted por causa do Bypass do Adonis
 
