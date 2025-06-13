@@ -1,16 +1,16 @@
 local exec_name, exec_version = identifyexecutor()
 
-if exec_name == "Cloudy" then
-    warn("Cloudy is not supported, sorry")
-	return
-elseif exec_name == "Xeno" then
-    warn("Xeno is not supported, sorry")
-	return
+if exec_name ~= "Cloudy" then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/refs/heads/main/Source.lua"))()
+    -- Obrigado Pixeluted
+else
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Aviso",
+        Text = "Este script pode estar bugaddo no seu executor.",
+        Duration = 5
+    })
+	
 end
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Pixeluted/adoniscries/refs/heads/main/Source.lua"))()
--- Créditos ao Pixeluted por causa do Bypass do Adonis
 
 -- Anticheat Starter
 local starterCharacterScripts = game:GetService("StarterPlayer"):FindFirstChild("StarterCharacterScripts")
