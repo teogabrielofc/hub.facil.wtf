@@ -3,8 +3,8 @@ local lockedStudio = nil
 
 
 local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-
+local character = player.Character 
+player.PlayerGui.Main.Notification.Visible = false
 
 for _, plot in pairs(plots:GetChildren()) do
 	local plotSign = plot:FindFirstChild("PlotSign")
@@ -74,9 +74,19 @@ local autolocktoggle = tabbase:CreateToggle({
    Callback = function(Value)
    autolockvalue = Value
    while autolockvalue do
-   firetouchinterest(character.HumanoidRootPart, lockedStudio.Purchases.PlotBlock.Hitbox, 0)
-   firetouchinterest(character.HumanoidRootPart, lockedStudio.Purchases.PlotBlock.Hitbox, 1)
-   wait(0.2)
+   
+   character = player.Character or player.CharacterAdded:Wait()
+
+            
+            local root = character:FindFirstChild("HumanoidRootPart")
+            while not root do
+                wait(5)
+                character = player.Character or player.CharacterAdded:Wait()
+                root = character:FindFirstChild("HumanoidRootPart")
+            end
+   firetouchinterest(root, lockedStudio.Purchases.PlotBlock.Hitbox, 0)
+   firetouchinterest(root, lockedStudio.Purchases.PlotBlock.Hitbox, 1)
+   wait(0.3)
    end
    end,
 })
