@@ -68,7 +68,7 @@ local buttonbase = tabbase:CreateButton({
 
 local autolockvalue
 local autolocktoggle = tabbase:CreateToggle({
-   Name = "AutoLock",
+   Name = "AutoLock(Bugged/Bugado)",
    CurrentValue = false,
    Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
    Callback = function(Value)
@@ -77,7 +77,7 @@ local autolocktoggle = tabbase:CreateToggle({
 
    firetouchinterest(character.HumanoidRootPart, lockedStudio.Purchases.PlotBlock.Hitbox, 0)
    firetouchinterest(character.HumanoidRootPart, lockedStudio.Purchases.PlotBlock.Hitbox, 1)
-   wait(3)
+   wait(1)
    end
    end,
 })
