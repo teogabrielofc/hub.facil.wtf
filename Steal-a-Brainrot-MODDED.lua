@@ -74,19 +74,10 @@ local autolocktoggle = tabbase:CreateToggle({
    Callback = function(Value)
    autolockvalue = Value
    while autolockvalue do
-   
-   character = player.Character or player.CharacterAdded:Wait()
 
-            
-            local root = character:FindFirstChild("HumanoidRootPart")
-            while not root do
-                wait(5)
-                character = player.Character or player.CharacterAdded:Wait()
-                root = character:FindFirstChild("HumanoidRootPart")
-            end
-   firetouchinterest(root, lockedStudio.Purchases.PlotBlock.Hitbox, 0)
-   firetouchinterest(root, lockedStudio.Purchases.PlotBlock.Hitbox, 1)
-   wait(0.3)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Purchases.PlotBlock.Hitbox, 0)
+   firetouchinterest(character.HumanoidRootPart, lockedStudio.Purchases.PlotBlock.Hitbox, 1)
+   wait(3)
    end
    end,
 })
