@@ -4,7 +4,7 @@ local lockedStudio = nil
 
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
-player.PlayerGui.Main.Notification.Visible = false
+
 
 for _, plot in pairs(plots:GetChildren()) do
 	local plotSign = plot:FindFirstChild("PlotSign")
