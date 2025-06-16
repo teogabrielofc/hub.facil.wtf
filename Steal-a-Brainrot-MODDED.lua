@@ -98,7 +98,7 @@ local ButtonSteal = tabautosteal:CreateButton({
 
 local instantConn
 local ToggleInstant = tabautosteal:CreateToggle({ -- Créditos ao Sw1ft,
-   Name = "Instant  ProximityPrompt(Credits: Sw1ft Sync Discord @_oreofday12)",
+   Name = "Instant  ProximityPrompt",
    CurrentValue = false,
    Flag = "ToggleInstant",
    Callback = function(Value)
