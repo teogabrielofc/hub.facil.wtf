@@ -19,9 +19,9 @@ end
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
-   Name = "Steal a Character - hub.facil.wtf",
+   Name = "Steal a Brainrot MODDED - hub.facil.wtf",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
-   LoadingTitle = "Steal a Character",
+   LoadingTitle = "Steal a Brainrot MODDED",
    LoadingSubtitle = "by facil.wtf",
    Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
 
