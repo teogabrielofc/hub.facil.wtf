@@ -1,3 +1,4 @@
+-- Esse só funciona no outro que não é o bruh games porque: 1) Os caras simplesmente fizeram o jogo como teleport para outros jogos modded, e não é só 1, é vários, e todos tem os mesmos dados compartilhados. 2) O cara botou anticheat no autolock e auto get money pra tu ter que tá perto da base pra ele ativar, e não quero fazer o auto lock e o auto get money ficar te teleportando. 3) Eu já falei do anticheat, mas ele botou um de pegar as coisas auto pra quando vc pegar 1, vc tem que esperar pra pegar outro 
 local plots = game.workspace:WaitForChild("Plots")
 local lockedStudio = nil
 
@@ -92,7 +93,9 @@ local Button = tabmisc:CreateButton({
 local ButtonSteal = tabautosteal:CreateButton({
    Name = "Complete Steal/Completar Roubo",
    Callback = function()
-   game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RE/StealService/DeliverySteal"):FireServer()
+   
+   character.HumanoidRootPart.CFrame = lockedStudio.DeliveryHitbox.CFrame + Vector3.new(0, 3, 0)
+   
    end,
 })
 
@@ -104,8 +107,12 @@ local ToggleInstant = tabautosteal:CreateToggle({ -- Créditos ao Sw1ft,
    Callback = function(Value)
    instantConn = Value
    while instantConn do
-   game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(prompt) prompt.HoldDuration = 0 end)
-   wait(1)
+for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+ if v.ClassName == "ProximityPrompt" then
+  v.HoldDuration = 0
+ end
+end
+    wait(1)
    end
    end,
 })
@@ -118,11 +125,13 @@ local togglemoney = tabbase:CreateToggle({
    Callback = function(Value)
    getmoneyvalue = Value
    while getmoneyvalue do
-   for i = 1, 20 do
-            local args = { i }
-            game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RE/PlotService/ClaimCoins"):FireServer(unpack(args))
-         end
-   wait(2)
-   end
+   for _, podium in pairs(lockedStudio.AnimalPodiums:GetChildren()) do
+        if podium:FindFirstChild("Claim") and podium.Claim:FindFirstChild("Hitbox") then
+            firetouchinterest(character.HumanoidRootPart, podium.Claim.Hitbox, 0)
+            firetouchinterest(character.HumanoidRootPart, podium.Claim.Hitbox, 1)
+        end
+    end
+    wait(2)
+	end
    end,
 })
