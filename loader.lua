@@ -5,7 +5,7 @@ elseif game.PlaceId == 111989938562194 then
 elseif game.PlaceId == 101354156600579 then
   loadstring(game:HttpGet("https://hub.facil.wtf/Steal-a-Character.lua", true)) ()
 elseif game.PlaceId == 106470698860938 then
-  loadstring(game:HttpGet("https://hub.facil.wtf/Steal-a-Brainrot-MODDED.lua", true)) 
+  loadstring(game:HttpGet("https://hub.facil.wtf/Steal-a-Brainrot-MODDED.lua", true)) ()
 elseif game.PlaceId == 93523681035654 then
   loadstring(game:HttpGet("https://hub.facil.wtf/Steal-a-Brainrot-MODDED.lua", true)) ()
 
